@@ -29,26 +29,28 @@ type
   { TfrmMain }
 
   TfrmMain = class(TForm)
-    imgFavorites: TBCSVGButton;
     imgHome: TBCSVGButton;
+    imgFavorites: TBCSVGButton;
     imgMenu: TBCSVGButton;
-    Label1: TLabel;
+    lblTitleHome: TLabel;
     Label4: TLabel;
     Label5: TLabel;
     Panel1: TPanel;
     pnlHome: TPanel;
     pnlClient: TScrollBox;
     pnlHiddens: TFlowPanel;
-    pnlTop: TBCPanel;
-    pnlLeft: TBCPanel;
+    pnlLeft: TPanel;
+    pnlTop: TPanel;
     pnlUsers: TFlowPanel;
     procedure FormCreate(Sender: TObject);
     procedure ChangeView(tab: Integer);
+    procedure ChangeMode(dark: Boolean);
     procedure pnlEnter(Sender: TObject);
     procedure pnlExit(Sender: TObject);
   private
     FUser: String;
     FTab : Integer;
+    FDark : Boolean;
   public
 
   end;
@@ -56,8 +58,17 @@ type
 var
   frmMain: TfrmMain;
 
+
 const
   FTabDashboard = 1;
+
+  clDarkFont = TColor($cccccc);
+  clDarkToolbar = TColor($383838);
+  clDarkWorkspace = TColor($303030);
+
+  clLightFont = TColor($222222);
+  clLightToolbar = TColor($eeeeee);
+  clLightWorkspace = TColor($dddddd);
 
 implementation
 
@@ -91,6 +102,7 @@ begin
 
   BorderSpacing.Right := 8;
   BorderSpacing.Bottom := 8;
+
 end;
 
 { TfrmMain }
@@ -100,16 +112,16 @@ begin
   FUser := GetEnvironmentVariable('USER');
 
   ChangeView(FTabDashboard);
+  ChangeMode(true);
 
-  imgFavorites.SVGNormalXML.Text := imgFavorites.SVGNormalXML.Text.Replace('rgb(0,0,0)', 'rgb(255,255,255)');
 
 end;
 
 procedure TfrmMain.ChangeView(tab: Integer);
 var
-  i, j : Integer;
-  pnl : TPanel;
-  img : TBCSVGViewer;
+  i    : Integer;
+  pnl  : TPanel;
+  img  : TBCSVGViewer;
   splt : TStringArray;
   last : String;
   dirs : TStringList;
@@ -168,6 +180,46 @@ begin
   end;
 end;
 
+procedure TfrmMain.ChangeMode(dark: Boolean);
+begin
+  FDark := dark;
+
+  if (FDark) then
+  begin
+    self.Color      := clDarkWorkspace;
+    self.Font.Color := clDarkFont;
+    pnlTop.Color    := clDarkToolbar;
+    pnlLeft.Color   := clDarkToolbar;
+    pnlClient.Color := clDarkWorkspace;
+    pnlTop.Font.Color    := clDarkFont;
+    pnlLeft.Font.Color   := clDarkFont;
+    pnlClient.Font.Color := clDarkFont;
+    lblTitleHome.Font.Color := clDarkFont;
+
+    imgMenu.SVGNormalXML.Text := imgMenu.SVGNormalXML.Text.Replace('rgb(0,0,0)', ColorToString(clDarkFont).Substring(3).PadLeft(7, '#'));
+    imgHome.SVGNormalXML.Text := imgHome.SVGNormalXML.Text.Replace('rgb(0,0,0)', ColorToString(clDarkFont).Substring(3).PadLeft(7, '#'));
+    imgFavorites.SVGNormalXML.Text := imgFavorites.SVGNormalXML.Text.Replace('rgb(0,0,0)', ColorToString(clDarkFont).Substring(3).PadLeft(7, '#'));
+  end
+  else
+  begin
+    self.Color      := clLightWorkspace;
+    self.Font.Color := clLightFont;
+    pnlTop.Color    := clLightToolbar;
+    pnlLeft.Color   := clLightToolbar;
+    pnlClient.Color := clLightWorkspace;
+    pnlTop.Font.Color    := clLightFont;
+    pnlLeft.Font.Color   := clLightFont;
+    pnlClient.Font.Color := clLightFont;
+    lblTitleHome.Font.Color := clLightFont;
+
+    imgMenu.SVGNormalXML.Text := imgMenu.SVGNormalXML.Text.Replace('rgb(0,0,0)', ColorToString(clLightFont).Substring(3).PadLeft(7, '#'));
+    imgHome.SVGNormalXML.Text := imgHome.SVGNormalXML.Text.Replace('rgb(0,0,0)', ColorToString(clLightFont).Substring(3).PadLeft(7, '#'));
+    imgFavorites.SVGNormalXML.Text := imgFavorites.SVGNormalXML.Text.Replace('rgb(0,0,0)', ColorToString(clLightFont).Substring(3).PadLeft(7, '#'));
+
+  end;
+
+end;
+
 procedure TfrmMain.pnlEnter(Sender: TObject);
 begin
   TPanel(Sender).Color:= RGBToColor(50, 50, 50);
@@ -179,7 +231,6 @@ begin
 end;
 
 initialization
-
 
 
 end.

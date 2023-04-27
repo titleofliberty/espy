@@ -1,7 +1,7 @@
 object frmMain: TfrmMain
-  Left = 617
+  Left = 388
   Height = 713
-  Top = 160
+  Top = 170
   Width = 1063
   Caption = 'Espy'
   ClientHeight = 713
@@ -9,45 +9,113 @@ object frmMain: TfrmMain
   OnCreate = FormCreate
   ShowHint = True
   LCLVersion = '2.2.6.0'
-  object pnlTop: TBCPanel
+  object pnlClient: TScrollBox
+    Left = 48
+    Height = 665
+    Top = 48
+    Width = 1015
+    HorzScrollBar.Page = 217
+    VertScrollBar.Page = 156
+    Align = alClient
+    ChildSizing.LeftRightSpacing = 16
+    ChildSizing.TopBottomSpacing = 16
+    ChildSizing.VerticalSpacing = 16
+    ClientHeight = 663
+    ClientWidth = 1013
+    TabOrder = 0
+    object pnlHome: TPanel
+      Left = 16
+      Height = 124
+      Top = 16
+      Width = 981
+      Align = alTop
+      AutoSize = True
+      BevelOuter = bvNone
+      ChildSizing.VerticalSpacing = 16
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ClientHeight = 124
+      ClientWidth = 981
+      TabOrder = 0
+      object pnlUsers: TFlowPanel
+        Left = 0
+        Height = 1
+        Top = 87
+        Width = 981
+        Align = alTop
+        AutoSize = True
+        BevelOuter = bvNone
+        ControlList = <>
+        FlowLayout = tlTop
+        FlowStyle = fsLeftRightTopBottom
+        TabOrder = 0
+      end
+      object lblTitleHome: TLabel
+        Left = 0
+        Height = 38
+        Top = 0
+        Width = 981
+        Align = alTop
+        Caption = 'Home page'
+        Font.Height = -32
+        Font.Name = 'Sans'
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label4: TLabel
+        Left = 0
+        Height = 17
+        Top = 54
+        Width = 981
+        Align = alTop
+        Caption = 'USER DIRECTORIES'
+        ParentColor = False
+      end
+      object Label5: TLabel
+        Left = 0
+        Height = 17
+        Top = 104
+        Width = 981
+        Align = alTop
+        Caption = 'HIDDEN DIRECTORIES'
+        ParentColor = False
+      end
+      object pnlHiddens: TFlowPanel
+        Left = 0
+        Height = 1
+        Top = 127
+        Width = 981
+        Align = alTop
+        AutoSize = True
+        BevelOuter = bvNone
+        ControlList = <>
+        FlowLayout = tlTop
+        FlowStyle = fsLeftRightTopBottom
+        TabOrder = 1
+      end
+      object Panel1: TPanel
+        Left = 0
+        Height = 50
+        Top = 129
+        Width = 981
+        Align = alTop
+        Caption = 'Panel1'
+        TabOrder = 2
+      end
+    end
+  end
+  object pnlTop: TPanel
     Left = 0
     Height = 48
     Top = 0
     Width = 1063
     Align = alTop
-    ChildSizing.HorizontalSpacing = 8
-    Background.Color = clBtnFace
-    Background.Gradient1.StartColor = clWhite
-    Background.Gradient1.EndColor = clBlack
-    Background.Gradient1.GradientType = gtLinear
-    Background.Gradient1.Point1XPercent = 0
-    Background.Gradient1.Point1YPercent = 0
-    Background.Gradient1.Point2XPercent = 0
-    Background.Gradient1.Point2YPercent = 100
-    Background.Gradient2.StartColor = clWhite
-    Background.Gradient2.EndColor = clBlack
-    Background.Gradient2.GradientType = gtLinear
-    Background.Gradient2.Point1XPercent = 0
-    Background.Gradient2.Point1YPercent = 0
-    Background.Gradient2.Point2XPercent = 0
-    Background.Gradient2.Point2YPercent = 100
-    Background.Gradient1EndPercent = 35
-    Background.Style = bbsColor
-    BevelInner = bvNone
     BevelOuter = bvNone
-    BevelWidth = 1
-    Border.Style = bboNone
-    FontEx.Color = clDefault
-    FontEx.FontQuality = fqFineAntialiasing
-    FontEx.Shadow = False
-    FontEx.ShadowRadius = 5
-    FontEx.ShadowOffsetX = 5
-    FontEx.ShadowOffsetY = 5
-    FontEx.Style = []
+    ChildSizing.HorizontalSpacing = 8
+    ClientHeight = 48
+    ClientWidth = 1063
     ParentBackground = False
-    Rounding.RoundX = 1
-    Rounding.RoundY = 1
-    TabOrder = 0
+    TabOrder = 1
     object imgMenu: TBCSVGButton
       Cursor = crHandPoint
       Left = 0
@@ -147,44 +215,17 @@ object frmMain: TfrmMain
       Maximum = 0
     end
   end
-  object pnlLeft: TBCPanel
+  object pnlLeft: TPanel
     Left = 0
     Height = 665
     Top = 48
     Width = 48
     Align = alLeft
-    Background.Color = clBtnFace
-    Background.Gradient1.StartColor = clWhite
-    Background.Gradient1.EndColor = clBlack
-    Background.Gradient1.GradientType = gtLinear
-    Background.Gradient1.Point1XPercent = 0
-    Background.Gradient1.Point1YPercent = 0
-    Background.Gradient1.Point2XPercent = 0
-    Background.Gradient1.Point2YPercent = 100
-    Background.Gradient2.StartColor = clWhite
-    Background.Gradient2.EndColor = clBlack
-    Background.Gradient2.GradientType = gtLinear
-    Background.Gradient2.Point1XPercent = 0
-    Background.Gradient2.Point1YPercent = 0
-    Background.Gradient2.Point2XPercent = 0
-    Background.Gradient2.Point2YPercent = 100
-    Background.Gradient1EndPercent = 35
-    Background.Style = bbsColor
-    BevelInner = bvNone
     BevelOuter = bvNone
-    BevelWidth = 1
-    Border.Style = bboNone
-    FontEx.Color = clDefault
-    FontEx.FontQuality = fqFineAntialiasing
-    FontEx.Shadow = False
-    FontEx.ShadowRadius = 5
-    FontEx.ShadowOffsetX = 5
-    FontEx.ShadowOffsetY = 5
-    FontEx.Style = []
+    ClientHeight = 665
+    ClientWidth = 48
     ParentBackground = False
-    Rounding.RoundX = 1
-    Rounding.RoundY = 1
-    TabOrder = 1
+    TabOrder = 2
     object imgFavorites: TBCSVGButton
       Cursor = crHandPoint
       Left = 0
@@ -402,101 +443,6 @@ object frmMain: TfrmMain
       )
       Position = 0
       Maximum = 0
-    end
-  end
-  object pnlClient: TScrollBox
-    Left = 48
-    Height = 665
-    Top = 48
-    Width = 1015
-    HorzScrollBar.Page = 217
-    VertScrollBar.Page = 156
-    Align = alClient
-    ChildSizing.LeftRightSpacing = 16
-    ChildSizing.TopBottomSpacing = 16
-    ChildSizing.VerticalSpacing = 16
-    ClientHeight = 663
-    ClientWidth = 1013
-    TabOrder = 2
-    object pnlHome: TPanel
-      Left = 16
-      Height = 124
-      Top = 16
-      Width = 981
-      Align = alTop
-      AutoSize = True
-      BevelOuter = bvNone
-      ChildSizing.VerticalSpacing = 16
-      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
-      ChildSizing.EnlargeVertical = crsHomogenousChildResize
-      ClientHeight = 124
-      ClientWidth = 981
-      TabOrder = 0
-      object pnlUsers: TFlowPanel
-        Left = 0
-        Height = 1
-        Top = 87
-        Width = 981
-        Align = alTop
-        AutoSize = True
-        BevelOuter = bvNone
-        ControlList = <>
-        FlowLayout = tlTop
-        FlowStyle = fsLeftRightTopBottom
-        TabOrder = 0
-      end
-      object Label1: TLabel
-        Left = 0
-        Height = 38
-        Top = 0
-        Width = 981
-        Align = alTop
-        Caption = 'Home page'
-        Font.Height = -32
-        Font.Name = 'Sans'
-        ParentColor = False
-        ParentFont = False
-      end
-      object Label4: TLabel
-        Left = 0
-        Height = 17
-        Top = 54
-        Width = 981
-        Align = alTop
-        Caption = 'USER DIRECTORIES'
-        ParentColor = False
-      end
-      object Label5: TLabel
-        Left = 0
-        Height = 17
-        Top = 104
-        Width = 981
-        Align = alTop
-        Caption = 'HIDDEN DIRECTORIES'
-        ParentColor = False
-      end
-      object pnlHiddens: TFlowPanel
-        Left = 0
-        Height = 1
-        Top = 127
-        Width = 981
-        Align = alTop
-        AutoSize = True
-        BevelOuter = bvNone
-        ControlList = <>
-        FlowLayout = tlTop
-        FlowStyle = fsLeftRightTopBottom
-        TabOrder = 1
-      end
-      object Panel1: TPanel
-        Left = 0
-        Height = 50
-        Top = 129
-        Width = 981
-        Align = alTop
-        Caption = 'Panel1'
-        TabOrder = 2
-      end
     end
   end
 end

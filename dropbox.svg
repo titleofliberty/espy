@@ -10,7 +10,7 @@
   </clipPath>
  </defs>
  <defs class="TextShapeIndex">
-  <g ooo:slide="id1" ooo:id-list="id3 id4 id5 id6 id7"/>
+  <g ooo:slide="id1" ooo:id-list="id3 id4 id5 id6"/>
  </defs>
  <defs class="EmbeddedBulletChars">
   <g id="bullet-char-template-57356" transform="scale(0.00048828125,-0.00048828125)">
@@ -55,36 +55,28 @@
    <g id="container-id1">
     <g id="id1" class="Slide" clip-path="url(#presentation_clip_path)">
      <g class="Page">
-      <g class="Group">
-       <g class="com.sun.star.drawing.CustomShape">
-        <g id="id3">
-         <rect class="BoundingBox" stroke="none" fill="none" x="7545" y="10824" width="10418" height="8235"/>
-         <path fill="none" stroke="rgb(0,0,0)" stroke-width="762" stroke-linejoin="round" stroke-linecap="round" d="M 7926,17173 L 7926,12710 12753,11205 17580,12710 17580,17173 12753,18677 7926,17173 7926,17173 Z"/>
-        </g>
+      <g class="com.sun.star.drawing.CustomShape">
+       <g id="id3">
+        <rect class="BoundingBox" stroke="none" fill="none" x="5080" y="5078" width="15242" height="15243"/>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="1270" stroke-linejoin="round" stroke-linecap="round" d="M 5715,16193 L 5715,9207 12700,5714 19686,9207 19686,16193 12700,19685 5715,16193 Z"/>
        </g>
-       <g class="com.sun.star.drawing.CustomShape">
-        <g id="id4">
-         <rect class="BoundingBox" stroke="none" fill="none" x="2540" y="9333" width="10656" height="3659"/>
-         <path fill="none" stroke="rgb(0,0,0)" stroke-width="762" stroke-linejoin="round" stroke-linecap="round" d="M 7867,9714 L 12814,11162 7867,12610 2921,11162 7867,9714 7867,9714 Z"/>
-        </g>
+      </g>
+      <g class="com.sun.star.drawing.LineShape">
+       <g id="id4">
+        <rect class="BoundingBox" stroke="none" fill="none" x="5207" y="8921" width="8129" height="4669"/>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="1270" stroke-linejoin="round" stroke-linecap="round" d="M 5842,9556 L 12700,12954"/>
        </g>
-       <g class="com.sun.star.drawing.CustomShape">
-        <g id="id5">
-         <rect class="BoundingBox" stroke="none" fill="none" x="12206" y="9333" width="10656" height="3660"/>
-         <path fill="none" stroke="rgb(0,0,0)" stroke-width="762" stroke-linejoin="round" stroke-linecap="round" d="M 17533,9715 L 22480,11163 17533,12611 12587,11163 17533,9715 17533,9715 Z"/>
-        </g>
+      </g>
+      <g class="com.sun.star.drawing.LineShape">
+       <g id="id5">
+        <rect class="BoundingBox" stroke="none" fill="none" x="12192" y="8794" width="8129" height="4827"/>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="1270" stroke-linejoin="round" stroke-linecap="round" d="M 19685,9429 L 12827,12985"/>
        </g>
-       <g class="com.sun.star.drawing.CustomShape">
-        <g id="id6">
-         <rect class="BoundingBox" stroke="none" fill="none" x="2540" y="6331" width="10656" height="3660"/>
-         <path fill="none" stroke="rgb(0,0,0)" stroke-width="762" stroke-linejoin="round" stroke-linecap="round" d="M 7867,6712 L 12814,8160 7867,9609 2921,8160 7867,6712 7867,6712 Z"/>
-        </g>
-       </g>
-       <g class="com.sun.star.drawing.CustomShape">
-        <g id="id7">
-         <rect class="BoundingBox" stroke="none" fill="none" x="12206" y="6332" width="10656" height="3660"/>
-         <path fill="none" stroke="rgb(0,0,0)" stroke-width="762" stroke-linejoin="round" stroke-linecap="round" d="M 17533,6713 L 22480,8161 17533,9610 12587,8161 17533,6713 17533,6713 Z"/>
-        </g>
+      </g>
+      <g class="com.sun.star.drawing.LineShape">
+       <g id="id6">
+        <rect class="BoundingBox" stroke="none" fill="none" x="12065" y="12319" width="1398" height="8002"/>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="1270" stroke-linejoin="round" stroke-linecap="round" d="M 12827,12954 L 12700,19685"/>
        </g>
       </g>
      </g>

@@ -55,22 +55,24 @@
    <g id="container-id1">
     <g id="id1" class="Slide" clip-path="url(#presentation_clip_path)">
      <g class="Page">
-      <g class="com.sun.star.drawing.LineShape">
-       <g id="id3">
-        <rect class="BoundingBox" stroke="none" fill="none" x="2540" y="11470" width="20321" height="2541"/>
-        <path fill="none" stroke="rgb(0,0,0)" stroke-width="2540" stroke-linejoin="round" stroke-linecap="round" d="M 3810,12740 L 21590,12740"/>
+      <g class="Group">
+       <g class="com.sun.star.drawing.LineShape">
+        <g id="id3">
+         <rect class="BoundingBox" stroke="none" fill="none" x="5080" y="8255" width="15241" height="1271"/>
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="1270" stroke-linejoin="round" stroke-linecap="round" d="M 5715,8890 L 19685,8890"/>
+        </g>
        </g>
-      </g>
-      <g class="com.sun.star.drawing.LineShape">
-       <g id="id4">
-        <rect class="BoundingBox" stroke="none" fill="none" x="2540" y="5070" width="20321" height="2541"/>
-        <path fill="none" stroke="rgb(0,0,0)" stroke-width="2540" stroke-linejoin="round" stroke-linecap="round" d="M 3810,6340 L 21590,6340"/>
+       <g class="com.sun.star.drawing.LineShape">
+        <g id="id4">
+         <rect class="BoundingBox" stroke="none" fill="none" x="5080" y="12065" width="15241" height="1271"/>
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="1270" stroke-linejoin="round" stroke-linecap="round" d="M 5715,12700 L 19685,12700"/>
+        </g>
        </g>
-      </g>
-      <g class="com.sun.star.drawing.LineShape">
-       <g id="id5">
-        <rect class="BoundingBox" stroke="none" fill="none" x="2540" y="17770" width="20321" height="2541"/>
-        <path fill="none" stroke="rgb(0,0,0)" stroke-width="2540" stroke-linejoin="round" stroke-linecap="round" d="M 3810,19040 L 21590,19040"/>
+       <g class="com.sun.star.drawing.LineShape">
+        <g id="id5">
+         <rect class="BoundingBox" stroke="none" fill="none" x="5080" y="15875" width="15241" height="1271"/>
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="1270" stroke-linejoin="round" stroke-linecap="round" d="M 5715,16510 L 19685,16510"/>
+        </g>
        </g>
       </g>
      </g>

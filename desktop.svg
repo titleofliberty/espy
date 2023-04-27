@@ -57,14 +57,14 @@
      <g class="Page">
       <g class="com.sun.star.drawing.CustomShape">
        <g id="id3">
-        <rect class="BoundingBox" stroke="none" fill="none" x="2540" y="5080" width="20321" height="12955"/>
-        <path fill="none" stroke="rgb(0,0,0)" stroke-width="762" stroke-linejoin="round" stroke-linecap="round" d="M 12700,17653 L 2921,17653 2921,5461 22479,5461 22479,17653 12700,17653 Z"/>
+        <rect class="BoundingBox" stroke="none" fill="none" x="5080" y="7020" width="15241" height="8891"/>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="1270" stroke-linejoin="round" stroke-linecap="round" d="M 12700,15275 L 5715,15275 5715,7655 19685,7655 19685,15275 12700,15275 Z"/>
        </g>
       </g>
       <g class="com.sun.star.drawing.LineShape">
        <g id="id4">
-        <rect class="BoundingBox" stroke="none" fill="none" x="7239" y="19939" width="10923" height="763"/>
-        <path fill="none" stroke="rgb(0,0,0)" stroke-width="762" stroke-linejoin="round" stroke-linecap="round" d="M 7620,20320 L 17780,20320"/>
+        <rect class="BoundingBox" stroke="none" fill="none" x="8255" y="17085" width="8891" height="1271"/>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="1270" stroke-linejoin="round" stroke-linecap="round" d="M 8890,17720 L 16510,17720"/>
        </g>
       </g>
      </g>

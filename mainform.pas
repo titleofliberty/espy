@@ -29,9 +29,9 @@ type
   { TfrmMain }
 
   TfrmMain = class(TForm)
-    imgHome: TImage;
-    imgHome1: TImage;
-    imgMenu: TImage;
+    imgFavorites: TBCSVGButton;
+    imgHome: TBCSVGButton;
+    imgMenu: TBCSVGButton;
     Label1: TLabel;
     Label4: TLabel;
     Label5: TLabel;
@@ -101,6 +101,7 @@ begin
 
   ChangeView(FTabDashboard);
 
+  imgFavorites.SVGNormalXML.Text := imgFavorites.SVGNormalXML.Text.Replace('rgb(0,0,0)', 'rgb(255,255,255)');
 
 end;
 
@@ -108,7 +109,7 @@ procedure TfrmMain.ChangeView(tab: Integer);
 var
   i, j : Integer;
   pnl : TPanel;
-  img : TImage;
+  img : TBCSVGViewer;
   splt : TStringArray;
   last : String;
   dirs : TStringList;
@@ -136,23 +137,22 @@ begin
           pnl := TPanel.Create(pnlUsers);
           pnl.Parent := pnlUsers;
         end;
-        img := TImage.Create(pnl);
+        img := TBCSVGViewer.Create(pnl);
         img.Parent := pnl;
-        img.Align   := alLeft;
-        img.Stretch := false;
-        img.Center  := true;
+        img.Align := alLeft;
         img.Width := 50;
+        img.ColorOpacity := 0;
         case last of
-          'Games'    : img.Picture.LoadFromFile('game.png');
-          'Dropbox'  : img.Picture.LoadFromFile('dropbox.png');
-          'Desktop'  : img.Picture.LoadFromFile('desktop.png');
-          'Documents': img.Picture.LoadFromFile('document.png');
-          'Downloads': img.Picture.LoadFromFile('download.png');
-          'Pictures' : img.Picture.LoadFromFile('image.png');
-          'Videos'   : img.Picture.LoadFromFile('youtube.png');
-          'Music'    : img.Picture.LoadFromFile('music.png');
+          'Games'    : img.SVG.LoadFromFile('game.svg');
+          'Dropbox'  : img.SVG.LoadFromFile('dropbox.svg');
+          'Desktop'  : img.SVG.LoadFromFile('desktop.svg');
+          'Documents': img.SVG.LoadFromFile('document.svg');
+          'Downloads': img.SVG.LoadFromFile('download.svg');
+          'Pictures' : img.SVG.LoadFromFile('picture.svg');
+          'Videos'   : img.SVG.LoadFromFile('video.svg');
+          'Music'    : img.SVG.LoadFromFile('music.svg');
           else
-            img.Picture.LoadFromFile('folder.png');
+            img.SVG.LoadFromFile('folder.svg');
         end;
         pnl.BevelOuter := bvNone;
         pnl.Caption := last;
@@ -177,6 +177,10 @@ procedure TfrmMain.pnlExit(Sender: TObject);
 begin
   TPanel(Sender).Color:= RGBToColor(60, 60, 60);
 end;
+
+initialization
+
+
 
 end.
 

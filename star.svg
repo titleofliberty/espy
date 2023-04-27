@@ -57,8 +57,8 @@
      <g class="Page">
       <g class="com.sun.star.drawing.PolyPolygonShape">
        <g id="id3">
-        <rect class="BoundingBox" stroke="none" fill="none" x="2540" y="2540" width="20321" height="20321"/>
-        <path fill="none" stroke="rgb(0,0,0)" stroke-width="762" stroke-linejoin="round" stroke-linecap="round" d="M 12696,2921 L 9906,9652 2921,10396 8255,15113 6721,22479 12700,18415 18677,22479 16891,15113 22479,10396 15367,9525 12696,2921 Z"/>
+        <rect class="BoundingBox" stroke="none" fill="none" x="5080" y="5080" width="15241" height="15241"/>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="1270" stroke-linejoin="round" stroke-linecap="round" d="M 12697,5715 L 10414,9906 5715,11054 8890,14478 8429,19685 12700,17145 16969,19685 16256,14605 19685,11054 14986,10033 12697,5715 Z"/>
        </g>
       </g>
      </g>

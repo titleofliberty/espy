@@ -57,14 +57,14 @@
      <g class="Page">
       <g class="com.sun.star.drawing.CustomShape">
        <g id="id3">
-        <rect class="BoundingBox" stroke="none" fill="none" x="2540" y="6350" width="20321" height="12701"/>
-        <path fill="none" stroke="rgb(0,0,0)" stroke-width="762" stroke-linejoin="round" stroke-linecap="round" d="M 12700,18669 L 2921,18669 2921,6731 22479,6731 22479,18669 12700,18669 Z"/>
+        <rect class="BoundingBox" stroke="none" fill="none" x="4991" y="7747" width="15419" height="9907"/>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="1270" stroke-linejoin="round" stroke-linecap="round" d="M 12700,17018 L 5626,17018 5626,8382 19774,8382 19774,17018 12700,17018 Z"/>
        </g>
       </g>
       <g class="com.sun.star.drawing.CustomShape">
        <g id="id4">
-        <rect class="BoundingBox" stroke="none" fill="none" x="9841" y="9397" width="5718" height="6606"/>
-        <path fill="none" stroke="rgb(0,0,0)" stroke-width="762" stroke-linejoin="round" stroke-linecap="round" d="M 10223,15621 L 10223,9778 15177,12700 10223,15621 10223,15621 Z"/>
+        <rect class="BoundingBox" stroke="none" fill="none" x="10273" y="9951" width="4855" height="5498"/>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="1270" stroke-linejoin="round" stroke-linecap="round" d="M 10908,14813 L 10908,10586 14492,12700 10908,14813 10908,14813 Z"/>
        </g>
       </g>
      </g>

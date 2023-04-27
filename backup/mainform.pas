@@ -29,11 +29,13 @@ type
   { TfrmMain }
 
   TfrmMain = class(TForm)
+    imgHome: TBCSVGButton;
     imgFavorites: TBCSVGButton;
     imgMenu: TBCSVGButton;
+    imgMode: TBCSVGButton;
     lblTitleHome: TLabel;
-    Label4: TLabel;
-    Label5: TLabel;
+    lblSub1Home: TLabel;
+    lblSub2Home: TLabel;
     Panel1: TPanel;
     pnlHome: TPanel;
     pnlClient: TScrollBox;
@@ -44,6 +46,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure ChangeView(tab: Integer);
     procedure ChangeMode(dark: Boolean);
+    procedure imgModeClick(Sender: TObject);
     procedure pnlEnter(Sender: TObject);
     procedure pnlExit(Sender: TObject);
   private
@@ -65,7 +68,7 @@ const
   clDarkToolbar = TColor($383838);
   clDarkWorkspace = TColor($303030);
 
-  clLightFont = TColor($222222);
+  clLightFont = TColor($111111);
   clLightToolbar = TColor($eeeeee);
   clLightWorkspace = TColor($dddddd);
 
@@ -113,6 +116,9 @@ begin
   ChangeView(FTabDashboard);
   ChangeMode(true);
 
+  imgMenu.SVG.LoadFromFile('dark-menu.svg');
+  imgHome.SVG.LoadFromFile('dark-grid.svg');
+  imgFavorites.SVG.LoadFromFile('dark-star.svg');
 
 end;
 
@@ -153,17 +159,35 @@ begin
         img.Align := alLeft;
         img.Width := 50;
         img.ColorOpacity := 0;
-        case last of
-          'Games'    : img.SVG.LoadFromFile('game.svg');
-          'Dropbox'  : img.SVG.LoadFromFile('dropbox.svg');
-          'Desktop'  : img.SVG.LoadFromFile('desktop.svg');
-          'Documents': img.SVG.LoadFromFile('document.svg');
-          'Downloads': img.SVG.LoadFromFile('download.svg');
-          'Pictures' : img.SVG.LoadFromFile('picture.svg');
-          'Videos'   : img.SVG.LoadFromFile('video.svg');
-          'Music'    : img.SVG.LoadFromFile('music.svg');
-          else
-            img.SVG.LoadFromFile('folder.svg');
+        if (FDark) then
+        begin
+          case last of
+            'Games'    : img.SVG.LoadFromFile('dark-game.svg');
+            'Dropbox'  : img.SVG.LoadFromFile('dark-dropbox.svg');
+            'Desktop'  : img.SVG.LoadFromFile('dark-desktop.svg');
+            'Documents': img.SVG.LoadFromFile('dark-document.svg');
+            'Downloads': img.SVG.LoadFromFile('dark-download.svg');
+            'Pictures' : img.SVG.LoadFromFile('dark-picture.svg');
+            'Videos'   : img.SVG.LoadFromFile('dark-video.svg');
+            'Music'    : img.SVG.LoadFromFile('dark-music.svg');
+            else
+              img.SVG.LoadFromFile('dark-folder.svg');
+          end;
+        end
+        else
+        begin
+          case last of
+            'Games'    : img.SVG.LoadFromFile('light-game.svg');
+            'Dropbox'  : img.SVG.LoadFromFile('light-dropbox.svg');
+            'Desktop'  : img.SVG.LoadFromFile('light-desktop.svg');
+            'Documents': img.SVG.LoadFromFile('light-document.svg');
+            'Downloads': img.SVG.LoadFromFile('light-download.svg');
+            'Pictures' : img.SVG.LoadFromFile('light-picture.svg');
+            'Videos'   : img.SVG.LoadFromFile('light-video.svg');
+            'Music'    : img.SVG.LoadFromFile('light-music.svg');
+            else
+              img.SVG.LoadFromFile('light-folder.svg');
+          end;
         end;
         pnl.BevelOuter := bvNone;
         pnl.Caption := last;
@@ -173,7 +197,7 @@ begin
         pnl.BorderSpacing.Bottom := 8;
         pnl.Color := RGBToColor(60, 60, 60);
         pnl.OnMouseEnter := @pnlEnter;
-        pnl.OnMouseLeave  := @pnlExit;
+        pnl.OnMouseLeave := @pnlExit;
       end;
     end;
   end;
@@ -185,6 +209,8 @@ begin
 
   if (FDark) then
   begin
+    imgMode.SVG.LoadFromFile('dark.svg');
+
     self.Color      := clDarkWorkspace;
     self.Font.Color := clDarkFont;
     pnlTop.Color    := clDarkToolbar;
@@ -194,13 +220,18 @@ begin
     pnlLeft.Font.Color   := clDarkFont;
     pnlClient.Font.Color := clDarkFont;
     lblTitleHome.Font.Color := clDarkFont;
+    lblSub1Home.Font.Color  := clDarkFont;
+    lblSub2Home.Font.Color  := clDarkFont;
 
-    imgMenu.SVGNormalXML.Text := imgMenu.SVGNormalXML.Text.Replace('rgb(0,0,0)', ColorToString(clDarkFont).Substring(3).PadLeft(7, '#'));
-    imgHome.SVGNormalXML.Text := imgHome.SVGNormalXML.Text.Replace('rgb(0,0,0)', ColorToString(clDarkFont).Substring(3).PadLeft(7, '#'));
-    imgFavorites.SVGNormalXML.Text := imgFavorites.SVGNormalXML.Text.Replace('rgb(0,0,0)', ColorToString(clDarkFont).Substring(3).PadLeft(7, '#'));
+    imgMenu.SVG.LoadFromFile('dark-menu.svg');
+    imgMode.SVG.LoadFromFile('dark.svg');
+    imgHome.SVG.LoadFromFile('dark-grid.svg');
+    imgFavorites.SVG.LoadFromFile('dark-star.svg');
   end
   else
   begin
+    imgMode.SVG.LoadFromFile('light.svg');
+
     self.Color      := clLightWorkspace;
     self.Font.Color := clLightFont;
     pnlTop.Color    := clLightToolbar;
@@ -209,14 +240,23 @@ begin
     pnlTop.Font.Color    := clLightFont;
     pnlLeft.Font.Color   := clLightFont;
     pnlClient.Font.Color := clLightFont;
-    lblTitleHome.Font.Color := clLightFont;
 
-    imgMenu.SVGNormalXML.Text := imgMenu.SVGNormalXML.Text.Replace('rgb(0,0,0)', ColorToString(clLightFont).Substring(3).PadLeft(7, '#'));
-    imgHome.SVGNormalXML.Text := imgHome.SVGNormalXML.Text.Replace('rgb(0,0,0)', ColorToString(clLightFont).Substring(3).PadLeft(7, '#'));
-    imgFavorites.SVGNormalXML.Text := imgFavorites.SVGNormalXML.Text.Replace('rgb(0,0,0)', ColorToString(clLightFont).Substring(3).PadLeft(7, '#'));
+    lblTitleHome.Font.Color := clLightFont;
+    lblSub1Home.Font.Color  := clLightFont;
+    lblSub2Home.Font.Color  := clLightFont;
+
+    imgMenu.SVG.LoadFromFile('light-menu.svg');
+    imgMode.SVG.LoadFromFile('light.svg');
+    imgHome.SVG.LoadFromFile('light-grid.svg');
+    imgFavorites.SVG.LoadFromFile('light-star.svg');
 
   end;
 
+end;
+
+procedure TfrmMain.imgModeClick(Sender: TObject);
+begin
+  ChangeMode(not FDark);
 end;
 
 procedure TfrmMain.pnlEnter(Sender: TObject);

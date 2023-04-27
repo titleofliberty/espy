@@ -1,0 +1,278 @@
+object frmMain: TfrmMain
+  Left = 617
+  Height = 713
+  Top = 160
+  Width = 1063
+  Caption = 'Espy'
+  ClientHeight = 713
+  ClientWidth = 1063
+  OnCreate = FormCreate
+  ShowHint = True
+  LCLVersion = '2.2.6.0'
+  object pnlTop: TBCPanel
+    Left = 0
+    Height = 48
+    Top = 0
+    Width = 1063
+    Align = alTop
+    ChildSizing.HorizontalSpacing = 8
+    Background.Color = clBtnFace
+    Background.Gradient1.StartColor = clWhite
+    Background.Gradient1.EndColor = clBlack
+    Background.Gradient1.GradientType = gtLinear
+    Background.Gradient1.Point1XPercent = 0
+    Background.Gradient1.Point1YPercent = 0
+    Background.Gradient1.Point2XPercent = 0
+    Background.Gradient1.Point2YPercent = 100
+    Background.Gradient2.StartColor = clWhite
+    Background.Gradient2.EndColor = clBlack
+    Background.Gradient2.GradientType = gtLinear
+    Background.Gradient2.Point1XPercent = 0
+    Background.Gradient2.Point1YPercent = 0
+    Background.Gradient2.Point2XPercent = 0
+    Background.Gradient2.Point2YPercent = 100
+    Background.Gradient1EndPercent = 35
+    Background.Style = bbsColor
+    BevelInner = bvNone
+    BevelOuter = bvNone
+    BevelWidth = 1
+    Border.Style = bboNone
+    FontEx.Color = clDefault
+    FontEx.FontQuality = fqFineAntialiasing
+    FontEx.Shadow = False
+    FontEx.ShadowRadius = 5
+    FontEx.ShadowOffsetX = 5
+    FontEx.ShadowOffsetY = 5
+    FontEx.Style = []
+    ParentBackground = False
+    Rounding.RoundX = 1
+    Rounding.RoundY = 1
+    TabOrder = 0
+    object imgMenu: TImage
+      Cursor = crHandPoint
+      Left = 0
+      Height = 48
+      Top = 0
+      Width = 48
+      Align = alLeft
+      Center = True
+      Picture.Data = {
+        1754506F727461626C654E6574776F726B47726170686963E500000089504E47
+        0D0A1A0A0000000D4948445200000020000000200806000000737A7AF4000000
+        0473424954080808087C0864880000000970485973000000EC000000EC017928
+        71BD0000001974455874536F667477617265007777772E696E6B73636170652E
+        6F72679BEE3C1A00000062494441545885EDD4410A80201046E1575DA28E52F7
+        AF4304EDEB10697B1142D045F43E703388E330F083F4775DA63601333054EE75
+        031B70BE5D3C80D8E8EC69B33EF381503256A19816722B188185362B5881ABF2
+        BBFA3873C01C90CC017340D203A31C5EE7147461B60000000049454E44AE4260
+        82
+      }
+    end
+  end
+  object pnlLeft: TBCPanel
+    Left = 0
+    Height = 665
+    Top = 48
+    Width = 48
+    Align = alLeft
+    ChildSizing.VerticalSpacing = 8
+    Background.Color = clBtnFace
+    Background.Gradient1.StartColor = clWhite
+    Background.Gradient1.EndColor = clBlack
+    Background.Gradient1.GradientType = gtLinear
+    Background.Gradient1.Point1XPercent = 0
+    Background.Gradient1.Point1YPercent = 0
+    Background.Gradient1.Point2XPercent = 0
+    Background.Gradient1.Point2YPercent = 100
+    Background.Gradient2.StartColor = clWhite
+    Background.Gradient2.EndColor = clBlack
+    Background.Gradient2.GradientType = gtLinear
+    Background.Gradient2.Point1XPercent = 0
+    Background.Gradient2.Point1YPercent = 0
+    Background.Gradient2.Point2XPercent = 0
+    Background.Gradient2.Point2YPercent = 100
+    Background.Gradient1EndPercent = 35
+    Background.Style = bbsColor
+    BevelInner = bvNone
+    BevelOuter = bvNone
+    BevelWidth = 1
+    Border.Style = bboNone
+    FontEx.Color = clDefault
+    FontEx.FontQuality = fqFineAntialiasing
+    FontEx.Shadow = False
+    FontEx.ShadowRadius = 5
+    FontEx.ShadowOffsetX = 5
+    FontEx.ShadowOffsetY = 5
+    FontEx.Style = []
+    ParentBackground = False
+    Rounding.RoundX = 1
+    Rounding.RoundY = 1
+    TabOrder = 1
+    object imgHome: TImage
+      Cursor = crHandPoint
+      Left = 0
+      Height = 48
+      Hint = 'Home page'
+      Top = 0
+      Width = 48
+      Align = alTop
+      Center = True
+      Picture.Data = {
+        1754506F727461626C654E6574776F726B47726170686963AF02000089504E47
+        0D0A1A0A0000000D4948445200000020000000200806000000737A7AF4000000
+        0473424954080808087C08648800000009704859730000013C0000013C014D9B
+        C90E0000001974455874536F667477617265007777772E696E6B73636170652E
+        6F72679BEE3C1A0000022C494441545885ED973F68144114C67F5FB251134411
+        52A810B410F14F132D42BA9C8558458B8BA0168704C16013D442210817C43A95
+        A6086A2558A4B10A82A0F6168268E19F2A85160A0AE7A19EDEB3C82C4C2633EB
+        A57153DC8361EEDEFDDEEEC7B7C3DB770075A00D586235818A99014C02AD02B6
+        054C3AB6E26A536C1BA867C02820E005F087D5B10D38080C03CF801120035EB9
+        8BFBD1071C75CC3D57D30FBC07BEB0364680D1CC4B1C37B3AF3E21A9023C8D14
+        D7CCEC65C0EE043E46D81B66F6304C4AFA01D01329F8AFD11550BA00FF105ECF
+        0F86177B137553923E05B9AD097642D281D4BD3360D925AE15085D0EF68BEB60
+        AB6E455901BDC061D28FE3BB99BDCBBF483A046C4AB0BFCCEC8DC7EE23ED4C1B
+        782DD7B54A0B01A781CBA41D680097CCECADA431E026050EB0D2789E4BDA0FDC
+        A1D881398025D2FD3A5FD3CEA9F90ED879C74E77C02EF5381700769899FC051C
+        F39CF2F723117657823D1BB28EFF09A8F43ED01550BA00BF159F93140E19B116
+        0A7052D27090DB9E60C7246D89E47B73010D97B85D20B411ECB3EB60A7DC8AB2
+        02F60027483F8E26B068664D4983C029563BE7C76FE091997D9634004C000309
+        B60D3CDE10ADB8D49711C002FF6E9955E7D44C07EC8C63AB1DB00B1930E414DD
+        67E565E2C76E60DC63F27D91B5A3763F508BB04F800F11072E0043FE61BA9218
+        CBC723C5B71263792DC2DE4D8CE5E7610334A2AE80D205F887F081A456F0FB60
+        A26E4ED2B720B739C15E95742692EFCB3FD429F1EFF95F90692B4AD0D251DB00
+        00000049454E44AE426082
+      }
+    end
+    object imgHome1: TImage
+      Cursor = crHandPoint
+      Left = 0
+      Height = 48
+      Hint = 'Home page'
+      Top = 56
+      Width = 48
+      Align = alTop
+      Center = True
+      Picture.Data = {
+        1754506F727461626C654E6574776F726B47726170686963E002000089504E47
+        0D0A1A0A0000000D4948445200000020000000200806000000737A7AF4000000
+        0473424954080808087C0864880000000970485973000000EC000000EC017928
+        71BD0000001974455874536F667477617265007777772E696E6B73636170652E
+        6F72679BEE3C1A0000025D494441545885EDD6CD8B4E711407F0CF608CCC1061
+        C6BB12F21AF2075813CADBD6CB4624C9C2C2023BB110F90FAC88BCCB52A92929
+        C460F2928C34E56DA518F2722DEEB93D771ECF3CE65E66369C3ADDDF3DE77CCF
+        F79C737FBF7B2FFFA5BCECC47BBCC3F6C1265F86EF4842BF63E960167029888F
+        E178AC2F0C16F912FCC047B4A22DD63FB078300A382FEDF868CE762C6C67079A
+        7C81F479F76072CE3E119FA453583490059C91767ABC86EF44F84E0D04F128AC
+        54E97E4A8D9829F81C312B30BA3F898755DDCFC57CCCCEE91CE988333981EE1A
+        B9BAC3B717D7C2F6064FF12CA78FF0B81ADC88AB2AE7BA5A7B701FFB6B145DDD
+        D0C188EDA993EF7296A72180EB700E1F70A3AAE2677815C022D280697A4F7336
+        964B1FCF5A5CCC82B706C11DB414242A222DC1916053DE31165DE168D7CF0D54
+        504647EE24B8C65407CCC0F308B88D717F917C0C6E46EE9798D557E074E9334F
+        7017E3FF02F958DC8A9C2F30F3778089D2A392C475D21F904FC0BDC8F50453FB
+        0B9C844E958D59EFE8F5258DD2292691AB70236DD297488255250A58ADD2796B
+        5F4143EA24788307B11E59A2800CF3006FCB14000BE3FACBABB31F92611694C0
+        8211F886AF682A816F0A6C5D7CBD09CCC350E93EF852A2802FD2233D4CFA912B
+        5C4036BA47357C8DD23FE1F6D0ED61AB9687715D58C3F75B392CDDC50772B621
+        D8A8723AF2DA856DD2A96572307C87CA147025C0EBE37E0D3A72849DD810DA99
+        B37744ACC0669FDFC292BDBB8FE4D659A75BF4EE7468D8BA727137039BE07A99
+        02F6E93DE2D7D885E17530C323E67515767799021AB003A7B107CD05B0CD51C8
+        496C2E43FEEFC84FA14AB0957695B4E00000000049454E44AE426082
+      }
+    end
+  end
+  object pnlClient: TScrollBox
+    Left = 48
+    Height = 665
+    Top = 48
+    Width = 1015
+    HorzScrollBar.Page = 217
+    VertScrollBar.Page = 156
+    Align = alClient
+    ChildSizing.LeftRightSpacing = 16
+    ChildSizing.TopBottomSpacing = 16
+    ChildSizing.VerticalSpacing = 16
+    ClientHeight = 663
+    ClientWidth = 1013
+    TabOrder = 2
+    object pnlHome: TPanel
+      Left = 16
+      Height = 124
+      Top = 16
+      Width = 981
+      Align = alTop
+      AutoSize = True
+      BevelOuter = bvNone
+      ChildSizing.VerticalSpacing = 16
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ClientHeight = 124
+      ClientWidth = 981
+      TabOrder = 0
+      object pnlUsers: TFlowPanel
+        Left = 0
+        Height = 1
+        Top = 87
+        Width = 981
+        Align = alTop
+        AutoSize = True
+        BevelOuter = bvNone
+        ControlList = <>
+        FlowLayout = tlTop
+        FlowStyle = fsLeftRightTopBottom
+        TabOrder = 0
+      end
+      object Label1: TLabel
+        Left = 0
+        Height = 38
+        Top = 0
+        Width = 981
+        Align = alTop
+        Caption = 'Home page'
+        Font.Height = -32
+        Font.Name = 'Sans'
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label4: TLabel
+        Left = 0
+        Height = 17
+        Top = 54
+        Width = 981
+        Align = alTop
+        Caption = 'USER DIRECTORIES'
+        ParentColor = False
+      end
+      object Label5: TLabel
+        Left = 0
+        Height = 17
+        Top = 104
+        Width = 981
+        Align = alTop
+        Caption = 'HIDDEN DIRECTORIES'
+        ParentColor = False
+      end
+      object pnlHiddens: TFlowPanel
+        Left = 0
+        Height = 1
+        Top = 127
+        Width = 981
+        Align = alTop
+        AutoSize = True
+        BevelOuter = bvNone
+        ControlList = <>
+        FlowLayout = tlTop
+        FlowStyle = fsLeftRightTopBottom
+        TabOrder = 1
+      end
+      object Panel1: TPanel
+        Left = 0
+        Height = 50
+        Top = 129
+        Width = 981
+        Align = alTop
+        Caption = 'Panel1'
+        TabOrder = 2
+      end
+    end
+  end
+end
